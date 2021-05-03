@@ -1,0 +1,12 @@
+div {
+  margin: 30px;
+  padding: 40px;
+  border: 1px;
+  border-color: dimgray;
+  border-style: solid;
+  width: 400px;
+}
+
+p {
+  text-align: left;
+}
