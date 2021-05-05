@@ -2,16 +2,24 @@
 <div>
   <app-header></app-header>
 </div>
-<div>
+
+<div class="title">
   <h1>
     {{ title }}
     </h1>
+    <nav>
+      <a routerLink="/processedFoods" class="nav">Processed Foods</a>
+      <a routerLink="/ingredients" class="nav">Ingredients</a>
+      <a routerLink="/naturalResources" class="nav">Natural Resources</a>
+    </nav>
 </div>
+
+
 
 
 <div style="display: flex; flex-grow: grow">
   <app-image-scroll></app-image-scroll>
-  <app-item-details></app-item-details>{{ ingredientsList}}   {{ food }}
+  <app-item-details></app-item-details>{{ corn.name }}   {{ corn.image }}
 </div>
 
 <div style="text-align:center">
