@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ProcessedFood} from '../processedFood';
+import { ProcessedFoodService } from '../processed-food.service';
 
 @Component({
   selector: 'app-image-scroll',
@@ -6,16 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./image-scroll.component.css']
 })
 export class ImageScrollComponent implements OnInit {
-  images = [
-    {name: "Twinkies", altText: "Box of Twinkies", image: "assets/images/processed-foods/twinkie.png"},
-    {name: "Nutella", altText: "Jar of Nutella", image: "assets/images/processed-foods/nutella.png"},
-    {name: "Raisin Nut Bran", altText: "Box of Raisin Nut Bran", image: "assets/images/processed-foods/raisinnutbran.png"},
-    {name: "Red Bull", altText: "Can and carton of Red Bull", image: "assets/images/processed-foods/redbull.png"}
-  ]
+  processedFoods: ProcessedFood[];
+  
 
-  constructor() { }
+  constructor(private processedFoodService: ProcessedFoodService) { }
+
+  getProcessedFoods(): void {
+    this.processedFoodService.getProcessedFoods()
+        .subscribe(processedFoods => this.processedFoods = processedFoods);
+  }
 
   ngOnInit() {
+    this.getProcessedFoods();
   }
 
 }

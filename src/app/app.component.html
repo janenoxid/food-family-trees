@@ -17,19 +17,13 @@
 
 
 
+
 <div style="display: flex; flex-grow: grow">
   <app-image-scroll></app-image-scroll>
-  <app-item-details></app-item-details>{{ corn.name }}   {{ corn.image }}
+  <app-item-details></app-item-details>{{ corn.name }}   {{ corn.image }}&nbsp; <a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a>
 </div>
+<app-edit-details></app-edit-details>
 
-<div style="text-align:center">
-
-</div>
-
-
-<p><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></p>
-
-<p>
-
-
-</p>
+<p>{{ corn.name}}</p>
+<label for="name">Name: </label>
+<input id="name" [(ngModel)]="corn.name" placeholder="name">
