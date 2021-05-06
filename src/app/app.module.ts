@@ -8,6 +8,7 @@ import { ImageScrollComponent } from './image-scroll/image-scroll.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { EditDetailsComponent } from './edit-details/edit-details.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditDetailsComponent } from './edit-details/edit-details.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
