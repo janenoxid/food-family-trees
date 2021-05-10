@@ -8,7 +8,6 @@ import {NaturalResource} from './naturalResources';
 })
 export class AppComponent {
   title = 'Processed Food Family Trees';
-  corn = new NaturalResource(1, 'Corn', 'image of corn', ["this", "that", "and the other"])
 
   constructor() { }
 
