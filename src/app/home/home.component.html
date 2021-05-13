@@ -3,9 +3,9 @@
 
 
 <div>
-    <img *ngFor = "let processedFood of processedFoods" src="{{processedFood.image}}" (click)="onSelect(processedFood)" alt="{{processedFood.altText}}">
+    <img *ngFor = "let processedFood of processedFoods" src="{{processedFood.image}}"  alt="{{processedFood.altText}}">
 </div>
 
 <div >
-    <img *ngFor = "let ingredient of ingredients" src="{{ingredient.image}}" (click)="onSelect(processedFood)" alt="{{ingredient.altText}}">
+    <img *ngFor = "let ingredient of ingredients" src="{{ingredient.image}}"  alt="{{ingredient.altText}}">
 </div>
