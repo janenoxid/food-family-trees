@@ -1,1 +1,4 @@
-<p>ingredients works!</p>
+<div *ngFor = "let ingredient of ingredients">
+    <p>{{ingredient.name}}</p>
+    <img src="{{ingredient.image}}" (click)="onSelect(processedFood)" alt="{{ingredient.altText}}">
+</div>

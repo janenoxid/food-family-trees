@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Ingredient} from '../ingredients';
+import { ProcessedFoodService } from '../processed-food.service';
 
 @Component({
   selector: 'app-ingredients',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ingredients.component.css']
 })
 export class IngredientsComponent implements OnInit {
+  ingredients: Ingredient[];
 
-  constructor() { }
+
+  constructor(private processedFoodService: ProcessedFoodService) { }
+
+  getIngredients(): void {
+    this.processedFoodService.getIngredients()
+        .subscribe(ingredients => this.ingredients = ingredients);
+  }
 
   ngOnInit() {
+    this.getIngredients();
   }
 
 }

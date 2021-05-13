@@ -2,3 +2,11 @@
 body {
   margin: 2em;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: rgb(182, 181, 177) 1px 0 10px;
+}

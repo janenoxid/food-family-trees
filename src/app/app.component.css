@@ -1,13 +1,15 @@
 .title {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
-  padding: 35px 0px 50px 0px;
+  padding: 30px 0px 50px 0px;
 }
 
 .nav {
   margin: 10px;
   padding: 20px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-color: rgb(248, 208, 176);
-  border-radius: 50%;
+  background-color: rgb(245, 231, 219);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30%;
 }
